@@ -1,0 +1,32 @@
+//
+// More Animations for Bootstrap Carousel
+//
+// Needs the less-easing mixins --> https://github.com/mralexandernickel/less-easing
+//
+// @author Alexander Nickel <mr.alexander.nickel@gmail.com>
+//
+.carousel.fade {
+  opacity: 1;
+
+  .item {
+    .easeInOut(opacity, .7s);
+    left: 0 !important;
+    opacity: 0;
+    top: 0;
+    position: absolute;
+    width: 100%;
+    display: block !important;
+    z-index: 1;
+
+    &:first-child {
+      top: auto;
+      position: relative;
+    }
+
+    &.active {
+      opacity: 1;
+      .easeInOut(opacity, .7s);
+      z-index: 2;
+    }
+  }
+}
